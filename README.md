@@ -4,12 +4,6 @@
 
 ---
 
-## Imposto de Renda
-
-O **Imposto de Renda** é calculado de acordo com a diferença. Ou seja, se o teto de isenção for R$2000 e você receber uma promoção de R$100, o imposto não será calculado sobre o valor total de R$2100, mas sim sobre os **R$100 da promoção**. Esse cálculo é progressivo, sendo aplicado somente sobre o valor excedente ao teto.
-
----
-
 ## Bases de Cálculo
 
 ### 1. **FGTS** (Fundo de Garantia do Tempo de Serviço)
