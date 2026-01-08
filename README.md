@@ -1,6 +1,6 @@
 # Impostos no Salário
 
-**Exercício da faculdade**, com algumas melhorias feitas, planejo transformar em um site no futuro.
+**Exercício da faculdade**, com algumas melhorias.
 
 ---
 
@@ -12,7 +12,7 @@
 - **Trabalhadores domésticos**: **11,2%** do salário mensal.
 - **Jovem aprendiz**: **2%** do salário mensal.
 
-## 2. **IR** (Imposto de Renda)
+## 2. **IR** (Imposto de Renda) - 2026
 
 - Até R$ 900: isento  
 - De R$ 901 a R$ 1500: 5%  
@@ -20,22 +20,3 @@
 - Acima de R$ 2500: 20%
 
 ---
-<!--
-
-- **Para trabalhadores em geral**:
-    - Se o salário for x, o FGTS será:
-    
-    FGTS = x * 0.08 
-    
-
-- **Para trabalhadores domésticos**:
-    - Se o salário for y, o FGTS será:
-    
-    FGTS = y * 0.112
-   
-
-- **Para jovem aprendiz**:
-    - Se o salário for z, o FGTS será:
-  
-    FGTS = z * 0.02
--->
