@@ -22,53 +22,62 @@ public class impostoNoSalario {
   public static void main (String[] args) {
 
     //Scanner usado para entrada de dados via teclado
-     Scanner input = new Scanner(System.in);
+    Scanner input = new Scanner(System.in);
 
     //Principais variaveis
+    int Colaboracao;
     float ImpostoDeRenda, SalarioBruto, SalarioLiquido, fgts = 0;
       
     //Solicita o salário bruto ao usuário
     System.out.println("Digite seu salário bruto");
     SalarioBruto = input.nextFloat();
     System.out.println("-----------------------------------------------");
-    
+
+    //so permite o codigo com um número válido
+    do{
     //Solicita o cargo do colaborador
     System.out.println("Digite o numero correspondente com o seu cargo:");
     System.out.println("1 - Trabalhador em geral");
     System.out.println("2 - Trabalhador doméstico");
     System.out.println("3 - Jovem aprendiz");
     System.out.println("-----------------------------------------------");
-    int Colaboracao = input.nextInt();
-    //tem como fazer pro resultado digitado do imput nao ficar salvo no terminal?
+    Colaboracao = input.nextInt();
     System.out.println("-----------------------------------------------");
     
-    //Faz o cálculo de acordo com o cargo do funcionário
+    //Calcula o FGTS de acordo com o cargo do funcionário
     if (Colaboracao == 1){
         fgts = SalarioBruto * 0.08f;
-    }
+     }
     else if (Colaboracao == 2){
         fgts = SalarioBruto * 0.112f;
-    }
+     }
      else if (Colaboracao == 3){
         fgts = SalarioBruto * 0.02f;
-    }
-    //planejo utilizar aquele que nao tem que executar o codigo todo novamente
+     }
     else {
         System.out.println("Digite uma opção válida");
-    }
+     }
+    //Finaliza o loop
+    } while (Colaboracao < 1 || Colaboracao > 3);
     
     /*
     * Cálculo do imposto de renda de acordo com a faixa salárial
     */
-    if (SalarioBruto <=900) {
-      ImpostoDeRenda = (SalarioBruto * 5f) / 100;
-    }
-    else if (SalarioBruto <=2500){
-      ImpostoDeRenda = SalarioBruto* 0.1f;
-    }
+    if (SalarioBruto <=2428.8) {
+      ImpostoDeRenda = 0;
+     }
+    else if (SalarioBruto >=2428.81 && SalarioBruto <=2826.65){
+      ImpostoDeRenda = (SalarioBruto * 7.5f) / 100;
+     }  
+    else if (SalarioBruto >=2826.66 && SalarioBruto <=3751.05){
+      ImpostoDeRenda = SalarioBruto* 0.15f;
+     }
+    else if (SalarioBruto >=3751.06 && SalarioBruto <=4664.68){
+      ImpostoDeRenda = SalarioBruto* 0.225f;
+     }
     else {
-      ImpostoDeRenda = SalarioBruto*0.2f;
-    }
+      ImpostoDeRenda = SalarioBruto*0.275f;
+     }
     
     //Cálculo do salário recebido após descontos
     SalarioLiquido = SalarioBruto - ImpostoDeRenda;
