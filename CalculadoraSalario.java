@@ -31,18 +31,25 @@ class CalculadoraSalario {
     private void calcularImpostoDeRenda() {
         float salario = funcionario.salarioBruto;
 
-        if (salario <= 2428.80f) {
-            impostoDeRenda = 0;
-        } else if (salario <= 2826.65f) {
-            impostoDeRenda = salario * 0.075f;
-        } else if (salario <= 3751.05f) {
-            impostoDeRenda = salario * 0.15f;
-        } else if (salario <= 4664.68f) {
-            impostoDeRenda = salario * 0.225f;
-        } else {
-            impostoDeRenda = salario * 0.275f;
-        }
+        if (salario > 2259.20f) {
+        float faixa = Math.min(salario, 2826.65f) - 2259.20f;
+        impostoDeRenda += faixa * 0.075f;
     }
+
+    if (salario > 2826.65f) {
+        float faixa = Math.min(salario, 3751.05f) - 2826.65f;
+        impostoDeRenda += faixa * 0.15f;
+    }
+
+    if (salario > 3751.05f) {
+        float faixa = Math.min(salario, 4664.68f) - 3751.05f;
+        impostoDeRenda += faixa * 0.225f;
+    }
+
+    if (salario > 4664.68f) {
+        impostoDeRenda += (salario - 4664.68f) * 0.275f;
+    }
+   }
 
     //Cálculo do INSS
     private void calcularINSS() {

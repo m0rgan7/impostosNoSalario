@@ -46,7 +46,10 @@ public class ImpostoNoSalario {
             colaboracao = input.nextInt();
             System.out.println("-----------------------------------------------");
 
-            break; // Sai do loop se a entrada for válida
+            if (colaboracao < 1 || colaboracao > 3) {
+                System.out.println("Entrada inválida. Digite 1, 2 ou 3.");
+            }
+
         } catch (InputMismatchException e) {
             System.out.println("Entrada inválida. Digite um número inteiro.");
             input.next(); // Limpa a entrada inválida
