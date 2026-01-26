@@ -82,10 +82,10 @@ class CalculadoraSalario {
     }
 
     private void exibirResultados() {
-        System.out.println("Salário bruto: R$ " + funcionario.salarioBruto);
-        System.out.println("Salário liquido: R$ " + salarioLiquido);
-        System.out.println("Valor descontado do Imposto de Renda: R$ " + impostoDeRenda);
-        System.out.println("Valor descontado do INSS: R$ " + inss);
-        System.out.println("O valor do seu FGTS deve ser: R$ " + fgts);
+        System.out.printf("Salário bruto: R$ %.2f%n", funcionario.salarioBruto);
+        System.out.printf("Salário liquido: R$ %.2f%n", salarioLiquido);
+        System.out.printf("Valor descontado do Imposto de Renda: R$ %.2f%n", impostoDeRenda);
+        System.out.printf("Valor descontado do INSS: R$ %.2f%n", inss);
+        System.out.printf("O valor do seu FGTS deve ser: R$ %.2f%n", fgts);
     }
 }
